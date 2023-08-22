@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="card " style="background-color: aqua;">
+        <div class="card-header text-end">
+            <h5 class="card-title text-center">
+                Result Management System
+                <a href="/logout" class="btn btn-primary badge bg-light text-dark bg-primary float-right">Logout</a>
+            </h5>
+        </div>
+    </div>
+    <br>
+    <h4>
+        <a href="/" class="btn btn-primary badge bg-light text-dark bg-primary float-right">Back</a>
+        <a href="/addrecord" class="btn btn-primary badge bg-light text-dark bg-primary float-right">Add Record</a>
+    </h4>
+    <div class="row">
+        <div class="col-12">
+            <table class="table  table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>RollNumber</th>
+                        <th>Name</th>
+                        <th>DOB</th>
+                        <th>Score</th>
+                        <th style="width: 15%;" class="text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%= for(var i=0; i < sampledata.length; i++) 
+                    {%>
+
+                        <tr>
+    
+                            <td>
+    
+                                "<%= sampledata[i].rollNo%>"
+    
+                            </td>
+    
+                            <td>
+    
+                                <%= sampledata[i].name%>
+    
+                            </td>
+    
+                            <td>
+    
+                                <%= sampledata[i].dateOfBirth%>
+    
+                            </td>
+    
+                            <td>
+    
+                                <%= sampledata[i].score%>
+    
+                            </td>
+                            <td><a href="/users/edit/<%=sampledata.id%>">Edit</a></td>
+                            <td><a href="/users/delete/<%=sampledata.id%>">Delete</a></td>
+                        </tr>
+                    <%}
+                    %>
+                                
+                </tbody> 
+            </table>
+        </div>
+    </div>
+    
+</body>
+
+</html>
