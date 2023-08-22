@@ -1,0 +1,14 @@
+C:\Users\prajjawalpatel\source\repos\Facade\Singleton\bin\Debug\netcoreapp3.1\Singleton.exe
+C:\Users\prajjawalpatel\source\repos\Facade\Singleton\bin\Debug\netcoreapp3.1\Singleton.deps.json
+C:\Users\prajjawalpatel\source\repos\Facade\Singleton\bin\Debug\netcoreapp3.1\Singleton.runtimeconfig.json
+C:\Users\prajjawalpatel\source\repos\Facade\Singleton\bin\Debug\netcoreapp3.1\Singleton.runtimeconfig.dev.json
+C:\Users\prajjawalpatel\source\repos\Facade\Singleton\bin\Debug\netcoreapp3.1\Singleton.dll
+C:\Users\prajjawalpatel\source\repos\Facade\Singleton\bin\Debug\netcoreapp3.1\Singleton.pdb
+C:\Users\prajjawalpatel\source\repos\Facade\Singleton\obj\Debug\netcoreapp3.1\Singleton.csproj.AssemblyReference.cache
+C:\Users\prajjawalpatel\source\repos\Facade\Singleton\obj\Debug\netcoreapp3.1\Singleton.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prajjawalpatel\source\repos\Facade\Singleton\obj\Debug\netcoreapp3.1\Singleton.AssemblyInfoInputs.cache
+C:\Users\prajjawalpatel\source\repos\Facade\Singleton\obj\Debug\netcoreapp3.1\Singleton.AssemblyInfo.cs
+C:\Users\prajjawalpatel\source\repos\Facade\Singleton\obj\Debug\netcoreapp3.1\Singleton.csproj.CoreCompileInputs.cache
+C:\Users\prajjawalpatel\source\repos\Facade\Singleton\obj\Debug\netcoreapp3.1\Singleton.dll
+C:\Users\prajjawalpatel\source\repos\Facade\Singleton\obj\Debug\netcoreapp3.1\Singleton.pdb
+C:\Users\prajjawalpatel\source\repos\Facade\Singleton\obj\Debug\netcoreapp3.1\Singleton.genruntimeconfig.cache

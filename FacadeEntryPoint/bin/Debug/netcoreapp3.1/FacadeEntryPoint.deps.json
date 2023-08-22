@@ -1,0 +1,74 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "FacadeEntryPoint/1.0.0": {
+        "dependencies": {
+          "Adapter": "1.0.0",
+          "Factory": "1.0.0",
+          "Strategy": "1.0.0"
+        },
+        "runtime": {
+          "FacadeEntryPoint.dll": {}
+        }
+      },
+      "Adapter/1.0.0": {
+        "dependencies": {
+          "Singleton": "1.0.0"
+        },
+        "runtime": {
+          "Adapter.dll": {}
+        }
+      },
+      "Factory/1.0.0": {
+        "runtime": {
+          "Factory.dll": {}
+        }
+      },
+      "Singleton/1.0.0": {
+        "runtime": {
+          "Singleton.dll": {}
+        }
+      },
+      "Strategy/1.0.0": {
+        "dependencies": {
+          "Factory": "1.0.0"
+        },
+        "runtime": {
+          "Strategy.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FacadeEntryPoint/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Adapter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Factory/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Singleton/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Strategy/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

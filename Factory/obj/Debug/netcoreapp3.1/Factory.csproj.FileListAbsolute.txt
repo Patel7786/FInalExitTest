@@ -1,0 +1,14 @@
+C:\Users\prajjawalpatel\source\repos\Facade\Factory\obj\Debug\netcoreapp3.1\Factory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prajjawalpatel\source\repos\Facade\Factory\obj\Debug\netcoreapp3.1\Factory.AssemblyInfoInputs.cache
+C:\Users\prajjawalpatel\source\repos\Facade\Factory\obj\Debug\netcoreapp3.1\Factory.AssemblyInfo.cs
+C:\Users\prajjawalpatel\source\repos\Facade\Factory\obj\Debug\netcoreapp3.1\Factory.csproj.CoreCompileInputs.cache
+C:\Users\prajjawalpatel\source\repos\Facade\Factory\bin\Debug\netcoreapp3.1\Factory.exe
+C:\Users\prajjawalpatel\source\repos\Facade\Factory\bin\Debug\netcoreapp3.1\Factory.deps.json
+C:\Users\prajjawalpatel\source\repos\Facade\Factory\bin\Debug\netcoreapp3.1\Factory.runtimeconfig.json
+C:\Users\prajjawalpatel\source\repos\Facade\Factory\bin\Debug\netcoreapp3.1\Factory.runtimeconfig.dev.json
+C:\Users\prajjawalpatel\source\repos\Facade\Factory\bin\Debug\netcoreapp3.1\Factory.dll
+C:\Users\prajjawalpatel\source\repos\Facade\Factory\bin\Debug\netcoreapp3.1\Factory.pdb
+C:\Users\prajjawalpatel\source\repos\Facade\Factory\obj\Debug\netcoreapp3.1\Factory.dll
+C:\Users\prajjawalpatel\source\repos\Facade\Factory\obj\Debug\netcoreapp3.1\Factory.pdb
+C:\Users\prajjawalpatel\source\repos\Facade\Factory\obj\Debug\netcoreapp3.1\Factory.genruntimeconfig.cache
+C:\Users\prajjawalpatel\source\repos\Facade\Factory\obj\Debug\netcoreapp3.1\Factory.csproj.AssemblyReference.cache

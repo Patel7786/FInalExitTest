@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Strategy/1.0.0": {
+        "dependencies": {
+          "Factory": "1.0.0"
+        },
+        "runtime": {
+          "Strategy.dll": {}
+        }
+      },
+      "Factory/1.0.0": {
+        "runtime": {
+          "Factory.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Strategy/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Factory/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
