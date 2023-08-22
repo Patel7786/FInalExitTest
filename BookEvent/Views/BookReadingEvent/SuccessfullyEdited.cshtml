@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Edit Event";
+}
+
+
+
+@{
+    TempData.Keep("Id");
+    TempData.Keep("doc");
+}
+
+
+
+
+<div class="container">
+    <h4 class="display-4"> Edited Event</h4>
+    <hr />
+    @if (ViewBag.IsSuccces == true)
+    {
+        <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Success!</strong> You are Sucessfully Edited.<br />
+            click <a asp-controller="BookReadingEvent" asp-action="Details" asp-route-id="@ViewBag.EventID">Here</a>To view the result
+        </div>
+    }
+</div>

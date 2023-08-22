@@ -1,0 +1,53 @@
+﻿@model RegisterModel
+
+
+<div class="container">
+    <h4 class="display-4"> Register</h4>
+    <hr />
+    @if (ViewBag.IsError == 2 && ViewBag.IsSuccces == false)
+    {
+        <div class="alert alert-danger alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Emails Already Exist!</strong><br />
+        </div>
+    }
+    @if (ViewBag.IsSuccces == true && ViewBag.IsError == 0)
+    {
+
+        <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Success!</strong> You are Sucessfully Register.<br />
+
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post" asp-action="Register" asp-controller="Home">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="FullName" class="control-label"></label>
+                    <input asp-for="FullName" class="form-control" />
+                    <span asp-validation-for="FullName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Register" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

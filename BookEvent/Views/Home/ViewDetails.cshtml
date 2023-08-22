@@ -1,0 +1,68 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_Layout";
+}
+
+@{
+    ViewData["Title"] = "View Details";
+}
+
+@model BookEvent.Models.BookEventModel
+
+
+
+<div class="Container">
+    <h1 class="text-center">View Details</h1>
+    <br />
+    <h1>Past Event</h1>
+    <br />
+    <div class="flex-xl-grow-1">
+        <table class="table ">
+
+            <thead>
+                <tr>
+                    <th scope="col">UserId</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">StartTime</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">CommentAdded</th>
+                    <th scope="col">Count</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">OtherDetails</th>
+                    <th scope="col">Description</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <th scope="row">@Model.UserId</th>
+                    <td>@Model.Title</td>
+                    <td>@Model.StartTime</td>
+                    <td>@Model.Date</td>
+                    <td>@Model.Duration</td>
+                    <td>@Model.CommentAdded</td>
+                    <td>@Model.Count</td>
+                    <td>@Model.Location</td>
+                    <td>@Model.Type</td>
+                    <td>@Model.OtherDetails</td>
+                    <td>@Model.Description</td>
+                    
+
+                </tr>
+
+
+    </tbody>
+
+    </table>
+
+</div>
+
+</div>
+
+
+

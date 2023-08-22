@@ -1,0 +1,109 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_Layout";
+}
+
+@{
+    ViewData["Title"] = "My Event";
+}
+
+
+
+@{
+    TempData.Keep("Id");
+    TempData.Keep("doc");
+}
+
+
+@model IEnumerable<BookEvent.Models.BookEventModel>
+
+<div class="Container">
+    <h1 class="text-center">Welcome To My Events</h1>
+    <br />
+    <h1>UpComing Events Event</h1>
+    <br />
+    <div class="flex-xl-grow-1">
+        <table class="table table-striped ">
+
+            <thead>
+                <tr>
+                    <th scope="col">EventID</th>
+                    <th scope="col">View Details</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var b in Model)
+                {
+                    if (@b.Date > DateTime.Now)
+                    {
+                        <tr>
+                            <th scope="row">@b.EventId</th>
+                            <td>
+                                <div class="btn-group">
+                                    <a asp-controller="BookReadingEvent" asp-action="Details" asp-route-id="@b.EventId" class="btn-btn-outline-secondry">View details</a>
+                                </div>
+                            </td>
+                            <td>
+                                <a asp-controller="BookReadingEvent" asp-action="Edit" asp-route-id="@b.EventId" class="btn-btn-outline-secondry">Edit Event</a>
+                            </td>
+                            <td>@b.Title</td>
+                            <td>@b.Description</td>
+                        </tr>
+
+                    }
+
+                }
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <h1>Past Events Event</h1>
+    <br />
+    <div class="flex-xl-grow-1">
+        <table class="table table-striped ">
+
+            <thead>
+                <tr>
+                    <th scope="col">EventID</th>
+                    <th scope="col">View Details</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var b in Model)
+                {
+                    if (@b.Date < DateTime.Now)
+                    {
+                        <tr>
+                            <th scope="row">@b.EventId</th>
+                            <td>
+                                <div class="btn-group">
+                                    <a asp-controller="BookReadingEvent" asp-action="Details" asp-route-id="@b.EventId" class="btn-btn-outline-secondry">View details</a>
+                                </div>
+                            </td>
+                            <td>@b.Title</td>
+                            <td>@b.Description</td>
+                        </tr>
+
+                    }
+
+                }
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+
