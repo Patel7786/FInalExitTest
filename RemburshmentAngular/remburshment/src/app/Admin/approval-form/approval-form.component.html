@@ -1,0 +1,44 @@
+<app-aheader></app-aheader>
+
+<div class="container">
+   
+    <a (click)="back()" type="button" class="btn btn-primary " style="margin-left: 80%;">Back</a>
+</div>
+ <div class="FormAdd">
+     <form autocomplete="off" #myform="ngForm" (ngSubmit)="myform.form.valid && Update(myform)">
+         <div class="container">
+             <div class="row">
+ 
+                 <label for="ApprovedBy">ApprovedBy</label>  
+                 <div *ngIf="ApprovedBy.invalid && (ApprovedBy.touched || ApprovedBy.dirty)" class="float-right">
+                    <p class="text-danger">*Required</p>
+                </div>   
+                 <input type="text" name="ApprovedBy" class="form-control" #ApprovedBy="ngModel"  [(ngModel)]="this.DashBoardservice.ApproveDeclineData.ApprovedBy"  required>
+                    
+                 <label for="RequestedValue">RequestedValue</label> 
+                    <div *ngIf="RequestedValue.invalid && (RequestedValue.touched || RequestedValue.dirty)" class="float-right">
+                        <p class="text-danger">*Required</p>
+                    </div> 
+                 <input type="number" name="RequestedValue" class="form-control" #RequestedValue="ngModel" [(ngModel)]="this.DashBoardservice.ApproveDeclineData.RequestedValue"  required>
+                    
+                 <label for="ApproveValue">ApproveValue</label> 
+                 <div *ngIf="ApproveValue.invalid && (ApproveValue.touched || ApproveValue.dirty)" class="float-right">
+                    <p class="text-danger">*Required</p>
+                  </div> 
+                 <input type="number" name="ApproveValue" class="form-control" #ApproveValue="ngModel" [(ngModel)]="this.DashBoardservice.ApproveDeclineData.ApprovedValue"  required>
+ 
+                 <label for="ApprovedBy">Note</label> 
+                 <div *ngIf="Note.invalid && (Note.touched || Note.dirty)" class="float-right">
+                    <p class="text-danger">*Required</p>
+                 </div> 
+                 <input type="text" name="Note" class="form-control" #Note="ngModel"  [(ngModel)]="this.DashBoardservice.ApproveDeclineData.Note"  required>
+ 
+                
+             </div>
+             <div style="margin-top: 20px;">
+             <button type="submit" class="btn-btn-sucess btn-block">Submit</button>
+             </div>
+         </div>
+ 
+     </form>
+ </div>

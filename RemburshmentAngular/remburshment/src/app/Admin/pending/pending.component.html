@@ -1,0 +1,60 @@
+<app-aheader></app-aheader>
+<h1>Pending Request</h1>
+<div class="container">
+    <div class="flex-x1-grow-1">
+        <table class="table table-striped ">
+             
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Requested by</th>
+                    <th>Remburshment Type</th>
+                    <th>Requested Value</th>
+                    <th>Currency Type</th>
+                    
+                    <th>Recipet Attached</th>
+                    <th>Approve</th>
+                    <th>Decline</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of this.Dashboardservice.listDashBoard;">
+                    
+                    <td>
+                        <input type="datetime-local" [(ngModel)]="i.Date" class="form-control"/>
+            
+                    </td>
+                    <td>
+                        <input type="string" [(ngModel)]="i.Email" class="form-control"/>
+                    </td>
+
+                    <td>
+                        <input type="text" [(ngModel)]="i.RemburshmentType" class="form-control"/>
+                    </td>
+                    <td>
+                        <input type="number" [(ngModel)]="i.RequestedValue" class="form-control"/>
+                    </td>
+
+                    <td>
+                        <input type="text" [(ngModel)]="i.CurrencyType" class="form-control"/>
+                    </td>
+                    
+                    <td>
+                        <input type="text" [(ngModel)]="i.Image" class="form-control"/>
+                    </td>
+
+                    <td>
+                        <button class="btn btn-sm btn-success" [routerLink]="['approve',i.ID]" >Approve</button>
+                        
+                    </td>
+
+                    <td>
+                        <button class="btn btn-sm btn-success" [routerLink]="['decline',i.ID]" >Decline</button>
+                    </td>
+                    
+
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>

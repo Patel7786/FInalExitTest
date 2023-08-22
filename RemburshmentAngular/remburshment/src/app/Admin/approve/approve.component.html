@@ -1,0 +1,58 @@
+<app-aheader></app-aheader>
+<h1>Approve</h1>
+<div class="container">
+   
+    <a (click)="back()" type="button" class="btn btn-primary " style="margin-left: 80%;">Back</a>
+</div>
+
+<div class="container">
+    <div class="flex-x1-grow-1">
+        <table class="table table-striped ">
+             
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Requested by</th>
+                    <th>Remburshment Type</th>
+                    <th>Requested Value</th>
+                    <th>Currency Type</th>
+                    <th>Approve Value</th>
+                    <th>Recipet Attached</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of this.DashBoardservice.listApproveDecline;">
+                    
+                    <td>
+                        <input type="datetime-local" [(ngModel)]="i.Date" class="form-control"/>
+            
+                    </td>
+                    <td>
+                        <input type="string" [(ngModel)]="i.Email" class="form-control"/>
+                    </td>
+
+                    <td>
+                        <input type="text" [(ngModel)]="i.RemburshmentType" class="form-control"/>
+                    </td>
+                    <td>
+                        <input type="number" [(ngModel)]="i.RequestedValue" class="form-control"/>
+                    </td>
+
+                    <td>
+                        <input type="text" [(ngModel)]="i.CurrencyType" class="form-control"/>
+                    </td>
+
+                    <td>
+                        <input type="text" [(ngModel)]="i.ApprovedValue" class="form-control"/>
+                    </td>
+                    
+                    <td>
+                        <input type="text" [(ngModel)]="i.Image" class="form-control"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-dark bg-dark">
+    
+    <h1 class="hp">Reimbursement Management System</h1>
+    
+    
+</nav>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-0">
+                
+                <div class="FormAdd">
+                    <form autocomplete="off" #myform="ngForm" (ngSubmit)="myform.form.valid && submit(myform)">
+                        <div class="container">
+                            <div class="row">
+                                <label for="Email">Email</label>
+                                <div *ngIf="Email.invalid && (Email.touched || Email.dirty)" class="float-right">
+                                    <p class="text-danger">*Required</p>
+                                </div>
+                                <input type="text" name="Email" class="form-control "   placeholder="Enter Email" #Email="ngModel"  [(ngModel)]="signupservice.SignUpData.Email" required>
+                                                        
+                                <label for="Password">Password</label>
+                                <div *ngIf="Password.invalid && (Password.touched || Password.dirty)" class="float-right">
+                                    <p class="text-danger">*Required</p>
+                                </div>
+                                <input type="password" name="Password" class="form-control" placeholder="Enter Name" #Password="ngModel" [(ngModel)]="signupservice.SignUpData.Password" required>
+                            </div>
+                            <div style="margin-top: 20px;">
+                                <button type="submit" class="btn btn-primary ">Submit</button>
+                                <button routerLink="SignUp" type="button" class="btn btn-primary" style="margin-left: 20px;">SignUp</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                 
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<app-header></app-header>
+<div class="container">
+   <h1>Update-Details</h1>
+    <a (click)="back()" type="button" class="btn btn-primary" style="margin-top: 20px;">Back</a>
+</div>
+<div class="FormAdd">
+    <form autocomplete="off" #myform="ngForm" (ngSubmit)="myform.form.valid && Update(myform)">
+        <div class="container">
+            <div class="row">
+
+                <label for="Date">Date</label>    
+                <input type="datetime-local" name="name" class="form-control"  [(ngModel)]="this.DashBoardservice.UpdateData.Date"  required>
+
+
+                <div class="h">
+                    <label for="remburshmentType">RemburshmentType</label>
+                    <select name="RemburshmentID" #RemburshmentID="ngModel" [(ngModel)]="this.DashBoardservice.UpdateData.RemburshmentID" >
+                        <option value="0">Please select</option>
+                        <option [value]="t.RemburshmentID" *ngFor="let t of this.DashBoardservice.listRemburshment">{{t.RemburshmentType}}</option>
+                    </select>
+                </div>
+
+                <label for="RequestedValue">RequestedValue</label>    
+                <input type="number" name="RequestedValue" class="form-control"  [(ngModel)]="this.DashBoardservice.UpdateData.RequestedValue"  required>
+                
+                <label for="ApproveValue">ApproveValue</label>    
+                <input type="number" name="ApproveValue" class="form-control"  [(ngModel)]="this.DashBoardservice.UpdateData.ApprovedValue">
+
+                <label for="RequestedPhase">Requested Phase</label>    
+                <input type="text" name="RequestedPhase" class="form-control" placeholder="Enter Requested Value" [(ngModel)]="this.DashBoardservice.UpdateData.Status"  required>
+
+                <div class="h">
+                    <label for="CurrencyType">Currency</label>
+                    <select name="CurrencyID" #RemburshmentID="ngModel" [(ngModel)]="this.DashBoardservice.UpdateData.CurrencyID" >
+                        <option value="0">Please select</option>
+                        <option [value]="t.CurrencyID" *ngFor="let t of this.DashBoardservice.listCurrency">{{t.CurrencyType}}</option>
+                    </select>
+                </div>
+
+                
+                <label for="Image">Recipt Attached</label>
+                <input type="text" name="Image" class="form-control" placeholder="Please Select Image" [(ngModel)]="this.DashBoardservice.UpdateData.Image" required>
+
+                
+                
+                
+                
+                
+
+                
+            </div>
+            <div style="margin-top: 20px;">
+            <button type="submit" class="btn-btn-sucess btn-block">Submit</button>
+            </div>
+        </div>
+
+    </form>
+</div>

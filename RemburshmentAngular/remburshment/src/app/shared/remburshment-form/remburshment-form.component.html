@@ -1,0 +1,61 @@
+<app-header></app-header>
+<h1>Remburshment Form</h1>
+<div class="container">
+   
+    <a (click)="back()" type="button" class="btn btn-primary " style="margin-left: 80%;">Back</a>
+</div>
+<div class="FormAdd">
+    <form autocomplete="off" #myform="ngForm" (ngSubmit)="myform.form.valid && submit(myform)">
+        <div class="container">
+            <div class="row">
+
+                <label for="Date">Date</label> 
+                <div *ngIf="Date.invalid && (Date.touched || Date.dirty)" class="float-right">
+                    <p class="text-danger">*Required</p>
+                </div>   
+                <input type="Date" name="Date" class="form-control" placeholder="Enter Name" #Date="ngModel"  [(ngModel)]="DashBoardservice.DashBoardData.Date" required>
+
+
+                <div class="h">
+                    <label for="remburshmentType">RemburshmentType</label>
+                    
+                    <select name="RemburshmentID" #RemburshmentID="ngModel" [(ngModel)]="DashBoardservice.DashBoardData.RemburshmentID">
+                        <option value="0">Please select</option>
+                        <option [value]="t.RemburshmentID" *ngFor="let t of this.DashBoardservice.listRemburshment">{{t.RemburshmentType}}</option>
+                    </select>
+                </div>
+
+                <label for="RequestedValue">RequestedValue</label>   
+                
+                <div *ngIf="RequestedValue.invalid && (RequestedValue.touched || RequestedValue.dirty)" class="float-right">
+                    <p class="text-danger">*Required</p>
+                </div> 
+                <input type="number" name="RequestedValue" class="form-control" placeholder="Enter Requested Value" #RequestedValue="ngModel" [(ngModel)]="DashBoardservice.DashBoardData.RequestedValue" required>
+                
+                <div class="h">
+                    <label for="CurrencyType">Currency</label>
+                    <select name="CurrencyID" #RemburshmentID="ngModel" [(ngModel)]="DashBoardservice.DashBoardData.CurrencyID">
+                        <option value="0">Please select</option>
+                        <option [value]="t.CurrencyID" *ngFor="let t of this.DashBoardservice.listCurrency">{{t.CurrencyType}}</option>
+                    </select>
+                </div>
+
+                
+                <label for="Image">Image</label>
+                <input type="text" name="BankName" class="form-control" placeholder="Please Select Image"  [(ngModel)]="DashBoardservice.DashBoardData.Image" required>
+
+                
+                
+                
+                
+                
+
+                
+            </div>
+            <div style="margin-top: 20px;">
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>
+        </div>
+
+    </form>
+</div>

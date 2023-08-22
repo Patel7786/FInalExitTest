@@ -1,0 +1,66 @@
+<nav class="navbar navbar-dark bg-dark">
+    
+    <h1 class="hp">Reimbursement Management System</h1>
+    <button (click)="Back()" type="button" class="btn btn-primary" style="margin-left: 20px;">Back</button>
+
+</nav>
+
+<div class="FormAdd">
+    <form autocomplete="off" #myform="ngForm" (ngSubmit)="myform.form.valid && submit(myform)">
+        <div class="container">
+            <div class="row">
+                <label for="FullName">Name</label>  
+                <div *ngIf="FullName.invalid && (FullName.touched || FullName.dirty)" class="float-right">
+                    <p class="text-danger">*Required</p>
+                </div>   
+                <input type="text" name="name" class="form-control" placeholder="Enter Name" #FullName="ngModel" [(ngModel)]="signupservice.SignUpData.FullName" required>
+
+
+                <label for="PanNumber">PanNumber</label>
+                <div *ngIf="PanNumber.invalid && (PanNumber.touched || PanNumber.dirty)" class="float-right">
+                    <p class="text-danger">*Required</p>
+                </div> 
+                <input type="text" name="PanNumber" class="form-control" placeholder="Enter Name" #PanNumber="ngModel" [(ngModel)]="signupservice.SignUpData.PanNumber"required>
+
+                
+                <label for="Bankname">Bankname</label>
+                <div *ngIf="Bankname.invalid && (Bankname.touched || Bankname.dirty)" class="float-right">
+                    <p class="text-danger">*Required</p>
+                </div> 
+                <input type="text" name="BankName" class="form-control" placeholder="Enter Name" #Bankname="ngModel" [(ngModel)]="signupservice.SignUpData.BankName" required>
+                
+                <label for="AccountNumber">AccountNumber</label>
+                <div *ngIf="AccountNumber.invalid && (AccountNumber.touched || AccountNumber.dirty)" class="float-right">
+                    <p class="text-danger">*Required</p>
+                </div> 
+                <input type="text" name="AccountNumber" class="form-control" placeholder="Enter Name" #AccountNumber="ngModel" [(ngModel)]="signupservice.SignUpData.AccountNumber" required>                  
+                <div class="h">
+                <label for="Type">Type</label>
+                <select name="TypeID" #TypeID="ngModel" [(ngModel)]="signupservice.SignUpData.TypeID">
+                    <option value="0">Please select</option>
+                    <option [value]="t.TypeID" *ngFor="let t of this.signupservice.listSignUpType">{{t.Type}}</option>
+                </select>
+                </div>
+                
+                <label for="Email">Email</label>
+                <div *ngIf="Email.invalid && (Email.touched || Email.dirty)" class="float-right">
+                    <p class="text-danger">*Required</p>
+                </div> 
+                <input type="text" name="Email" class="form-control" placeholder="Enter Name" #Email="ngModel" [(ngModel)]="signupservice.SignUpData.Email" required>
+                
+
+                <label for="Password">Password</label>
+                <div *ngIf="Password.invalid && (Password.touched || Password.dirty)" class="float-right">
+                    <p class="text-danger">*Required</p>
+                </div> 
+                <input type="text" name="Password" class="form-control" placeholder="Enter Name" #Password="ngModel" [(ngModel)]="signupservice.SignUpData.Password" required>
+            </div>
+            <div style="margin-top: 20px;">
+            <button type="submit" class="btn-btn-primary btn-block">Submit</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+

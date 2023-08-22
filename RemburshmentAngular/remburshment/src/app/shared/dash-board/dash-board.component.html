@@ -1,0 +1,68 @@
+<app-header></app-header>
+<button (click)="RemburshmentForm()" type="button" class="btn btn-primary" style="margin: 20px; margin-left: 80%;">Add New Remburshment</button>
+<div class="container">
+    <div class="flex-x1-grow-1">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Remburshment Type</th>
+                    <th>Requested Value</th>
+                    <th>Currency Type</th>
+                    <th>Requested Phase</th>
+                    <th>Approved Value</th>
+                    <th>Recipet Attached</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of this.Dashboardservice.listMyDashBoard;">
+                    
+                    <td>
+                            <input type="datetime-local" [(ngModel)]="i.Date" class="form-control"/>
+                    
+                         
+                    </td>
+                    <td>
+                        <input type="text" [(ngModel)]="i.RemburshmentType" class="form-control"/>
+                    </td>
+                    <td>
+                        <input type="number" [(ngModel)]="i.RequestedValue" class="form-control"/>
+                    </td>
+
+                    <td>
+                        <input type="text" [(ngModel)]="i.CurrencyType" class="form-control"/>
+                    </td>
+                    <td>
+                        
+                        <input type="text" [(ngModel)]="i.Status" class="form-control"/>
+                    </td>
+
+                    
+
+                    <td>
+                        <input type="number" [(ngModel)]="i.ApprovedValue" class="form-control"/>
+                    </td>
+                    <td>
+                        <input type="text" [(ngModel)]="i.Image" class="form-control"/>
+                    </td>
+
+                    <td>
+                        <button class="btn btn-sm btn-success" [routerLink]="['Update',i.ID]" >Edit</button>
+                        
+                    </td>
+
+                    <td>
+                        <button class="btn btn-sm btn-success" (click)="Delete(i.ID)" >Delete</button>
+                    </td>
+                    
+
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+</div>
